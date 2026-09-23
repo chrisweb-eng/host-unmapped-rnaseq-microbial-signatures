@@ -1,0 +1,23 @@
+# Raw and processed sequencing data
+data/raw/
+data/trimmed/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Reference genome and indexes
+genome/
+index/
+
+# Kraken2 / Bracken databases
+database/
+
+# Large alignment files
+*.sam
+*.bam
+*.bai
+
+# Temporary files
+*.tmp
+*.temp
