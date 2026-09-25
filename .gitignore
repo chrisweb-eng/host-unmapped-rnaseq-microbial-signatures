@@ -21,3 +21,9 @@ database/
 # Temporary files
 *.tmp
 *.temp
+
+# Large Kraken2 per-read classification output
+results/kraken2/*.kraken
+
+# SRA download directories
+SRR*/
