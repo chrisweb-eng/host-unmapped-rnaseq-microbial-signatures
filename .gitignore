@@ -27,3 +27,7 @@ results/kraken2/*.kraken
 
 # SRA download directories
 SRR*/
+
+# R workspace files
+.RData
+.Rhistory
