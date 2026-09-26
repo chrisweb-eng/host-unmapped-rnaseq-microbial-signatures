@@ -42,7 +42,7 @@ Building on the pilot, the refined workflow will process the complete 15-sample 
 
 Refined workflow:
 
-`Raw RNA-seq reads → Falco → Trimmomatic → Falco → HISAT2 → host-unmapped reads → Falco → Kraken2 → Bracken`
+`Raw RNA-seq reads → Falco → Trimmomatic → Falco → HISAT2 → host-unmapped reads → Falco → Kraken2 → Bracken → abundance table → R → Bray–Curtis dissimilarity → PCoA → PERMANOVA → pairwise PERMANOVA → PERMDISP → visualisation and interpretation`
 
 ## Dataset
 
