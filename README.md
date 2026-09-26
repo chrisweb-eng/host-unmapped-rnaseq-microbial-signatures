@@ -1,4 +1,4 @@
-# RNA-seq Microbial Classification
+# Microbial Signatures in Host-Unmapped Human RNA-seq Reads
 
 ## Overview
 
