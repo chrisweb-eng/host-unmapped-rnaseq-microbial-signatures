@@ -1,0 +1,16 @@
+Sample	total_passed	total_failed	secondary_passed	secondary_failed	supplementary_passed	supplementary_failed	duplicates_passed	duplicates_failed	mapped_passed	mapped_failed	mapped_passed_pct	mapped_failed_pct	paired in sequencing_passed	paired in sequencing_failed	read1_passed	read1_failed	read2_passed	read2_failed	properly paired_passed	properly paired_failed	properly paired_passed_pct	properly paired_failed_pct	with itself and mate mapped_passed	with itself and mate mapped_failed	singletons_passed	singletons_failed	singletons_passed_pct	singletons_failed_pct	with mate mapped to a different chr_passed	with mate mapped to a different chr_failed	with mate mapped to a different chr (mapQ >= 5)_passed	with mate mapped to a different chr (mapQ >= 5)_failed	flagstat_total
+SRR2012208	52811799	0	36518743	0	0	0	0	0	52117734	0	98.69	nan	16293056	0	8146528	0	8146528	0	15296022	0	93.88	nan	15385196	0	213795	0	1.31	nan	69542	0	34403	0	52811799
+SRR33915754	6640603	0	974140	0	0	0	0	0	6039695	0	90.95	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	6640603
+SRR7961221	23555799	0	6157613	0	0	0	0	0	21493022	0	91.24	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	23555799
+SRR7961222	28527224	0	5588107	0	0	0	0	0	17212167	0	60.34	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	28527224
+SRR7961223	22295447	0	5282079	0	0	0	0	0	20854801	0	93.54	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	22295447
+SRR7961254	81766690	0	42449405	0	0	0	0	0	64678543	0	79.1	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	81766690
+SRR7961255	57697065	0	27644712	0	0	0	0	0	54440060	0	94.35	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	57697065
+SRR7961262	63088568	0	24014121	0	0	0	0	0	30773314	0	48.78	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	63088568
+SRR7961278	68005687	0	38628533	0	0	0	0	0	61066059	0	89.8	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	68005687
+SRR7961281	37832092	0	9277275	0	0	0	0	0	35250977	0	93.18	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	37832092
+SRR7961291	43002976	0	15648949	0	0	0	0	0	39304602	0	91.4	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	43002976
+SRR7961292	60481735	0	19097702	0	0	0	0	0	39224245	0	64.85	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	60481735
+SRR7961304	54064652	0	13856157	0	0	0	0	0	51641722	0	95.52	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	54064652
+SRR7961317	48313304	0	12343080	0	0	0	0	0	45258643	0	93.68	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	48313304
+SRR7961333	41936631	0	11434453	0	0	0	0	0	39916871	0	95.18	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	41936631

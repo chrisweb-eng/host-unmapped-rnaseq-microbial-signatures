@@ -1,0 +1,20 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Homo sapiens	9606	S	28514	272	28786	0.88956
+Burkholderia contaminans	488447	S	203	210	413	0.01276
+Ralstonia sp. RRA	3122075	S	251	232	483	0.01493
+Roseateles sp. DAIF2	2714952	S	15	24	39	0.00121
+Mitsuaria sp. 7	1658665	S	12	10	22	0.00068
+Paucibacter sediminis	3019553	S	24	35	59	0.00182
+uncultured Roseateles sp.	452440	S	10	6	16	0.00049
+Piscinibacter gummiphilus	946333	S	15	14	29	0.00090
+Aquincola tertiaricarbonis	391953	S	12	22	34	0.00105
+Bradyrhizobium sp. SK17	2057741	S	11	328	339	0.01048
+Mesorhizobium terrae	2725666	S	20	79	99	0.00306
+Shinella sp. XGS7	2877941	S	13	20	33	0.00102
+Pseudomonas sp. CIP-10	2892442	S	125	291	416	0.01286
+Stenotrophomonas maltophilia	40324	S	29	36	65	0.00201
+Chryseobacterium gallinarum	1324352	S	1191	8	1199	0.03705
+Cutibacterium acnes	1747	S	71	46	117	0.00362
+Priestia megaterium	1404	S	99	16	115	0.00355
+Bacillus cereus	1396	S	14	22	36	0.00111
+Bacillus velezensis	492670	S	10	40	50	0.00155

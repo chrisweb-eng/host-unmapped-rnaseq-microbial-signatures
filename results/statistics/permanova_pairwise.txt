@@ -1,0 +1,36 @@
+SKIN vs LUNG
+Permutation test for adonis under reduced model
+Permutation: free
+Number of permutations: 999
+
+adonis2(formula = bray_sub ~ tissue_sub, permutations = 999)
+         Df SumOfSqs      R2     F Pr(>F)
+Model     1   0.3225 0.09941 0.883  0.549
+Residual  8   2.9219 0.90059             
+Total     9   3.2444 1.00000             
+
+SKIN vs COLON
+Permutation test for adonis under reduced model
+Permutation: free
+Number of permutations: 999
+
+adonis2(formula = bray_sub ~ tissue_sub, permutations = 999)
+         Df SumOfSqs      R2     F Pr(>F)  
+Model     1   0.7625 0.20595 2.075  0.028 *
+Residual  8   2.9397 0.79405               
+Total     9   3.7022 1.00000               
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+LUNG vs COLON
+Permutation test for adonis under reduced model
+Permutation: free
+Number of permutations: 999
+
+adonis2(formula = bray_sub ~ tissue_sub, permutations = 999)
+         Df SumOfSqs      R2      F Pr(>F)  
+Model     1   0.6612 0.17878 1.7417  0.026 *
+Residual  8   3.0372 0.82122                
+Total     9   3.6984 1.00000                
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
