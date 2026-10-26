@@ -135,15 +135,15 @@ The locally reconstructed abundance table contains **30 non-human taxa** across 
 ### Mean relative abundance of selected taxa
 ![Mean relative abundance of selected microbial taxa across skin, lung and colon tissues](results/figures/mean_relative_abundance.png)
 
-*Figure 1. Mean relative abundance of selected microbial taxa across the three tissue groups.*
 
-Figure: Mean relative abundances reproduced from the dissertation's reported Bracken-derived values for selected non-human taxa in each tissue. The figure does not represent a fresh calculation from the locally reconstructed 30-taxon matrix. Human assignments are not displayed, and the plotted percentages have not been re-normalised to sum to 100% of non-human reads.
+
+*Figure 1. Mean relative abundance of selected microbial taxa across skin, lung and colon tissues, based on Bracken-derived values reported in the original MSc dissertation. Human assignments are not displayed, and percentages were not re-normalised after their exclusion.*
 
 ### Principal coordinates analysis (PCoA)
 
 ![PCoA of microbial community composition across skin, lung and colon tissues](results/figures/pcoa/pcoa_microbial.png)
 
-Figure: PCoA visualisation of Bray–Curtis dissimilarities between the 15 tissue samples. The image path should match the filename committed to the repository.
+*Figure 2. Principal coordinates analysis (PCoA) of Bray–Curtis dissimilarities across 15 RNA-seq samples from skin, lung and colon tissues. PCoA1 and PCoA2 explained 22.31% and 15.17% of the variation, respectively.*
 
 ### Community-level statistical results
 The table below compares the original MSc dissertation results with the locally reconstructed analysis. The differences reflect the use of different abundance matrices (29 versus 30 taxa).
@@ -161,6 +161,17 @@ The table below compares the original MSc dissertation results with the locally 
 
 Both analyses suggested tissue-associated differences in inferred microbial profiles, with colon differing from skin and lung, whereas skin and lung were not significantly different in the pairwise comparisons.
 
+### Interpretation of Findings
+
+The colon samples showed the most biologically plausible microbial profiles, with recognised gut-associated taxa including *Roseburia intestinalis*, *Blautia massiliensis*, *Phocaeicola vulgatus* and *Faecalibacterium prausnitzii*. These findings are broadly consistent with established body-site differences in microbial communities (Human Microbiome Project Consortium, 2012).
+
+In contrast, lung and skin samples exhibited more heterogeneous microbial signatures, including taxa not typically dominant in these tissues. Their greater overlap in the PCoA was consistent with the non-significant lung–skin pairwise PERMANOVA result.
+
+Both the original dissertation and locally reconstructed analyses identified significant tissue-associated differences, particularly between colon and the other two tissue groups. PERMDISP did not identify significant differences in within-group dispersion.
+
+Overall, the results suggest that host-unmapped RNA-seq reads can provide additional microbial sequence information. However, detected taxa should not automatically be interpreted as viable or resident microorganisms.
+
+
 ## 🔁 Reproducibility and Repository Contents
 The repository brings together the command-line workflow, downstream analysis scripts, selected summaries and figures. The main analysis components include:
 
@@ -176,6 +187,19 @@ The repository brings together the command-line workflow, downstream analysis sc
 The full reference genomes, Kraken2 databases and large raw sequencing files are not intended to be stored in this GitHub repository. Reproduction requires appropriate input datasets, reference files, database resources and compatible software environments. The exact computational requirements depend on the reference database and hardware available.
 
 ---
+
+### Research Implications and Future Directions
+
+This study demonstrates the potential value of recovering microbial sequence information from host-unmapped RNA-seq reads, extending the usefulness of datasets originally generated for human transcriptomic analysis. Previous studies have similarly demonstrated that unmapped RNA-seq reads can contain additional biological information (Simon et al., 2018; Chen et al., 2020).
+
+Future investigations could strengthen this approach through:
+
+- **Improved host depletion:** Extend the exploratory GRCh38–T2T-CHM13 host-removal strategy across all samples while assessing potential loss of genuine microbial reads.
+- **Human pangenome references:** Evaluate whether more genetically diverse human references improve host-read identification (Liao et al., 2023).
+- **De novo assembly:** Assemble unclassified reads into longer contigs for taxonomic and functional characterisation, potentially identifying sequences poorly represented in reference databases (Shafranskaya et al., 2022).
+- **Independent validation:** Compare RNA-seq-derived microbial signatures with matched microbiome-focused sequencing data to assess their reliability and biological relevance.
+
+These approaches represent future research opportunities rather than analyses completed across the full dataset.
 
 ## ⚠️ Limitations and Interpretation
 
@@ -196,3 +220,15 @@ The first local pilot revealed that microbial classification with the Kraken2 St
 This project demonstrates the development of a bioinformatics analysis from an initial MSc study into a local, script-based implementation. It includes troubleshooting of computational bottlenecks, handling of single-end and paired-end RNA-seq data, host-read depletion, microbial classification, abundance processing and statistical interpretation in R.
 
 **The microbial signatures reported here are exploratory and require further validation; they should not be interpreted as clinical diagnoses**.
+
+## Selected References
+
+1. Human Microbiome Project Consortium (2012). Structure, function and diversity of the healthy human microbiome. *Nature*, 486, 207–214. https://doi.org/10.1038/nature11234
+
+2. Simon, L.M. et al. (2018). MetaMap: An atlas of metatranscriptomic reads in human disease-related RNA-seq data. *GigaScience*, 7(6), giy070. https://doi.org/10.1093/gigascience/giy070
+
+3. Chen, S. et al. (2020). CAFU: A Galaxy framework for exploring unmapped RNA-Seq data. *Briefings in Bioinformatics*, 21(2), 676–686. https://doi.org/10.1093/bib/bbz018
+
+4. Liao, W.-W. et al. (2023). A draft human pangenome reference. *Nature*, 617, 312–324. https://doi.org/10.1038/s41586-023-05896-x
+
+5. Shafranskaya, D. et al. (2022). MetaGT: A pipeline for de novo assembly of metatranscriptomes with the aid of metagenomic data. *Frontiers in Microbiology*, 13, 981458. https://doi.org/10.3389/fmicb.2022.981458
