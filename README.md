@@ -194,7 +194,6 @@ This study demonstrates the potential value of recovering microbial sequence inf
 
 Future investigations could strengthen this approach through:
 
-- **Improved host depletion:** Extend the exploratory GRCh38–T2T-CHM13 host-removal strategy across all samples while assessing potential loss of genuine microbial reads.
 - **Human pangenome references:** Evaluate whether more genetically diverse human references improve host-read identification (Liao et al., 2023).
 - **De novo assembly:** Assemble unclassified reads into longer contigs for taxonomic and functional characterisation, potentially identifying sequences poorly represented in reference databases (Shafranskaya et al., 2022).
 - **Independent validation:** Compare RNA-seq-derived microbial signatures with matched microbiome-focused sequencing data to assess their reliability and biological relevance.
