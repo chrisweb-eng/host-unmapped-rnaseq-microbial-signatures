@@ -14,13 +14,13 @@ Human RNA-seq datasets contain reads that may fail to align to the human referen
 
 The workflow was developed in two stages. An initial single-sample pilot was used to establish and troubleshoot the local command-line workflow. The pipeline was then refined and scaled to analyse 15 human tissue RNA-seq samples from skin, lung and colon.
 
-##🧪 Project Rationale
+## 🧪 Project Rationale
 
 Human RNA-seq studies are primarily designed to investigate host gene expression. During alignment to a human reference genome, however, a proportion of reads may remain unmapped. These reads are often excluded from host-focused downstream analyses, but they may contain additional biological information that can be investigated further.
 
 This project investigates whether host-unmapped RNA-seq reads can be characterised to identify potential microbial signatures in human tissue transcriptomic datasets. Taxonomic classification and abundance estimation are used to examine the microbial taxa represented within these reads while recognising that host-unmapped reads are not necessarily microbial in origin.
 
-##⚙️ Workflow Development
+## ⚙️ Workflow Development
 
 The workflow was first established using a single RNA-seq sample as a pilot. This initial implementation was used to test the major stages of the pipeline, identify computational and methodological challenges, and determine the refinements required before scaling the analysis to the full 15-sample dataset.
 
