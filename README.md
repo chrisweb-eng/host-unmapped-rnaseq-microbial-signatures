@@ -30,25 +30,22 @@ The pilot workflow processed a single-end RNA-seq sample through quality control
 
 Pilot workflow:
 ```mermaid
-flowchart TD
-    A["Raw RNA-seq reads"] --> B["FastQC: Initial quality control"]
-    B --> C["fastp: Read preprocessing"]
-    C --> D["FastQC: Post-trimming quality control"]
-    D --> E["HISAT2: Human reference alignment"]
-    E --> F["Host-unmapped reads"]
-    F --> G["Kraken2: Taxonomic classification"]
-    G --> H["Bracken: Species-level abundance estimation"]
+flowchart LR
+    A["Raw reads"] --> B["FastQC"] --> C["fastp"]
+    C --> D["FastQC"] --> E["HISAT2"]
+    E --> F["Host-unmapped reads"] --> G["Kraken2"] --> H["Bracken"]
 
-    classDef input fill:#dbeafe,stroke:#2563eb,color:#1e40af;
-    classDef qc fill:#e0f2fe,stroke:#0284c7,color:#075985;
-    classDef alignment fill:#ede9fe,stroke:#7c3aed,color:#5b21b6;
-    classDef microbial fill:#dcfce7,stroke:#16a34a,color:#166534;
+    classDef input fill:#dbeafe,stroke:#2563eb,color:#1e40af
+    classDef qc fill:#e0f2fe,stroke:#0284c7,color:#075985
+    classDef alignment fill:#ede9fe,stroke:#7c3aed,color:#5b21b6
+    classDef microbial fill:#dcfce7,stroke:#16a34a,color:#166534
 
-    class A input;
-    class B,C,D qc;
-    class E,F alignment;
-    class G,H microbial;
+    class A input
+    class B,C,D qc
+    class E,F alignment
+    class G,H microbial
 ```
+
 
 ## Pilot Sample
 
@@ -69,31 +66,27 @@ Building on the pilot, the refined workflow processed the complete 15-sample dat
 
 Refined workflow:
 ```mermaid
-flowchart TD
-    A["Raw RNA-seq reads"] --> B["Falco quality control"]
-    B --> C["Trimmomatic preprocessing"]
-    C --> D["Falco quality control"]
-    D --> E["HISAT2 host alignment"]
-    E --> F["Host-unmapped reads"]
-    F --> G["Falco quality control"]
-    G --> H["Kraken2 classification"]
-    H --> I["Bracken abundance estimation"]
-    I --> J["Microbial abundance table"]
-    J --> K["R: Bray-Curtis dissimilarity"]
-    K --> L["PCoA"]
-    L --> M["PERMANOVA and pairwise PERMANOVA"]
-    M --> N["PERMDISP"]
-    N --> O["Visualisation and interpretation"]
+flowchart LR
+    A["Raw RNA-seq reads"] --> B["Falco + Trimmomatic"]
+    B --> C["HISAT2 host alignment"]
+    C --> D["Host-unmapped reads + Falco"]
+    D --> E["Kraken2 + Bracken"]
+    E --> F["Microbial abundance table"]
+    F --> G["R: Bray-Curtis + PCoA"]
+    G --> H["PERMANOVA + PERMDISP"]
+    H --> I["Visualisation and interpretation"]
 
-    classDef input fill:#dbeafe,stroke:#2563eb,color:#1e40af;
-    classDef processing fill:#e0f2fe,stroke:#0284c7,color:#075985;
-    classDef microbial fill:#dcfce7,stroke:#16a34a,color:#166534;
-    classDef analysis fill:#fef3c7,stroke:#d97706,color:#92400e;
+    classDef input fill:#dbeafe,stroke:#2563eb,color:#1e40af
+    classDef qc fill:#e0f2fe,stroke:#0284c7,color:#075985
+    classDef alignment fill:#ede9fe,stroke:#7c3aed,color:#5b21b6
+    classDef microbial fill:#dcfce7,stroke:#16a34a,color:#166534
+    classDef analysis fill:#fef3c7,stroke:#d97706,color:#92400e
 
-    class A input;
-    class B,C,D,E,F,G processing;
-    class H,I,J microbial;
-    class K,L,M,N,O analysis;
+    class A input
+    class B qc
+    class C,D alignment
+    class E,F microbial
+    class G,H,I analysis
 ```
 
 ---
