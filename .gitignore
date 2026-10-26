@@ -31,3 +31,34 @@ SRR*/
 # R workspace files
 .RData
 .Rhistory
+
+# Additional sequencing and reference files
+*.sra
+*.cram
+*.crai
+*.fai
+*.ht2
+*.ht2l
+*.bt2
+*.bt2l
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# R-generated temporary files
+.Rproj.user/
+Rplots.pdf
+
+# Backup and editor files
+*.bak
+*.backup
+*.swp
+*~
+*_backup.sh
+README.d
+README_old_backup.md
+
+# Operating system files
+.DS_Store
+Thumbs.db
