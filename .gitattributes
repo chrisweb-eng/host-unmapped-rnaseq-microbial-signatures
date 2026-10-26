@@ -1,3 +1,4 @@
-# Exclude generated HTML reports from GitHub language statistics
+# Exclude generated QC reports from GitHub language statistics
+qc/*.html linguist-generated=true
 qc/multiqc/*.html linguist-generated=true
 qc/multiqc/**/*.html linguist-generated=true 
