@@ -1,11 +1,13 @@
 
 #🧬 Microbial Signatures in Host-Unmapped Human RNA-seq Reads
+
 ![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-Ubuntu_Linux-blue)
 ![Analysis](https://img.shields.io/badge/Analysis-R_%7C_Python-orange)
 ![Samples](https://img.shields.io/badge/Samples-15-purple)
 
 ##🔎 Overview
+
 This project develops a reproducible bioinformatics workflow for investigating microbial signatures in host-unmapped reads from human RNA-seq datasets.
 
 Human RNA-seq datasets contain reads that may fail to align to the human reference genome. Rather than discarding these host-unmapped reads, this project examines them further using taxonomic classification and abundance estimation to investigate potential microbial signatures.
@@ -13,14 +15,17 @@ Human RNA-seq datasets contain reads that may fail to align to the human referen
 The workflow was developed in two stages. An initial single-sample pilot was used to establish and troubleshoot the local command-line workflow. The pipeline was then refined and scaled to analyse 15 human tissue RNA-seq samples from skin, lung and colon.
 
 ##🧪 Project Rationale
+
 Human RNA-seq studies are primarily designed to investigate host gene expression. During alignment to a human reference genome, however, a proportion of reads may remain unmapped. These reads are often excluded from host-focused downstream analyses, but they may contain additional biological information that can be investigated further.
 
 This project investigates whether host-unmapped RNA-seq reads can be characterised to identify potential microbial signatures in human tissue transcriptomic datasets. Taxonomic classification and abundance estimation are used to examine the microbial taxa represented within these reads while recognising that host-unmapped reads are not necessarily microbial in origin.
 
 ##⚙️ Workflow Development
+
 The workflow was first established using a single RNA-seq sample as a pilot. This initial implementation was used to test the major stages of the pipeline, identify computational and methodological challenges, and determine the refinements required before scaling the analysis to the full 15-sample dataset.
 
 ## Pilot Workflow
+
 The pilot workflow processed a single-end RNA-seq sample through quality control, read preprocessing, host alignment, microbial taxonomic classification and abundance estimation. FastQC v0.12.1 was used for read quality assessment, fastp v1.3.7 for preprocessing, HISAT2 v2.2.3 for alignment against the human reference genome, Kraken2 v2.17.1 for taxonomic classification of host-unmapped reads, and Bracken v3.0.1 for species-level abundance estimation. MultiQC v1.35 was used to aggregate and summarise quality-control and pipeline reports.
 
 Pilot workflow:
@@ -46,6 +51,7 @@ flowchart TD
 ```
 
 ## Pilot Sample
+
 The pilot workflow was implemented using SRR7961304 (SKIN_3), a 50 bp single-end human skin RNA-seq sample included in the full 15-sample dataset. This sample was selected to establish and troubleshoot the local command-line implementation of the workflow before scaling the pipeline across the complete dataset. The pilot therefore serves as an initial implementation stage rather than a separate analysis from the full study.
 
 ## Pilot Observations and Limitations
@@ -141,10 +147,10 @@ The locally reconstructed abundance table contains **30 non-human taxa** across 
 Figure: Mean relative abundances reproduced from the dissertation's reported Bracken-derived values for selected non-human taxa in each tissue. The figure does not represent a fresh calculation from the locally reconstructed 30-taxon matrix. Human assignments are not displayed, and the plotted percentages have not been re-normalised to sum to 100% of non-human reads.
 
 ### Principal coordinates analysis (PCoA)
-![PCoA of microbial community composition across skin, lung and colon tissues](results/figures/pcoa/pcoa_microbiome.png)
 
-*Figure 2. Principal coordinates analysis based on Bray–Curtis dissimilarity across 15 tissue samples.*
+![PCoA of microbial community composition across skin, lung and colon tissues](results/figures/pcoa/pcoa_microbial.png)
 
+Figure: PCoA visualisation of Bray–Curtis dissimilarities between the 15 tissue samples. The image path should match the filename committed to the repository.
 
 ### Community-level statistical results
 The table below compares the original MSc dissertation results with the locally reconstructed analysis. The differences reflect the use of different abundance matrices (29 versus 30 taxa).
