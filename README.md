@@ -1,12 +1,12 @@
 
-#🧬 Microbial Signatures in Host-Unmapped Human RNA-seq Reads
+# 🧬 Microbial Signatures in Host-Unmapped Human RNA-seq Reads
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-Ubuntu_Linux-blue)
 ![Analysis](https://img.shields.io/badge/Analysis-R_%7C_Python-orange)
 ![Samples](https://img.shields.io/badge/Samples-15-purple)
 
-##🔎 Overview
+## 🔎 Overview
 
 This project develops a reproducible bioinformatics workflow for investigating microbial signatures in host-unmapped reads from human RNA-seq datasets.
 
